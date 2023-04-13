@@ -2,7 +2,9 @@ def encode(plaintext, key)
   cipher = key.chars.uniq + (('a'...'z').to_a - key.chars)
   p "the cipher is #{cipher}"
   ciphertext_chars = plaintext.chars.map do |char| 
-    (65 + cipher.find_index(char)).chr
+    p "the char is #{char}"
+    (65 + char.ord).chr
+    p "the char is now #{char}"
   end
   return ciphertext_chars.join
 end
