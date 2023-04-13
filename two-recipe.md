@@ -46,10 +46,10 @@ check_punctuation("Hello world")
 check_punctuation("hello world")
 # => false
 
-check_punctuation("HELLo world.")
+check_punctuation("HELLO world.")
 # => true
 
-check_punctuation("This is a test for a longer sentence!")
+check_punctuation("Hello world!")
 # => true
 
 check_punctuation("Does this one work too?")
