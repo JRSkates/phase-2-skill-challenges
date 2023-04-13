@@ -33,25 +33,25 @@ uppercase_words: a list of strings (e.g. ["WORLD"])
 ## 3. Create Examples as Tests
 ```ruby
 #1
-todo_checker("") => fail "No text provided"
+todo_checker("") => fail "No text provided" #added
 
 #2
-todo_checker("hello world") => false
+todo_checker("#TODO") => true #added
 
 #3
-todo_checker("#TODO") => true
+todo_checker("hello world") => false #added
 
 #4
-todo_checker("TODO") => false
+todo_checker("TODO") => false #added
 
 #5
-todo_checker('pre text #TODO') => true
+todo_checker('pre text #TODO') => true #added
 
 #6
-todo_checker('#TODO post text') => true
+todo_checker('#TODO post text') => true #added
 
 #7
-todo_checker(3454) => false
+todo_checker(3454) => false #added
 
 ```
 ```ruby
