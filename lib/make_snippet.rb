@@ -1,4 +1,5 @@
 def make_snippet(str)
+  fail "String is empty" if str.to_s.empty?
   if str.to_s.split(" ").length <= 5
     return str
   else
