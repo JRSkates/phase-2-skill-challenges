@@ -1,14 +1,14 @@
 def get_most_common_letter(text)
-    counter = Hash.new(0)
+  counter = Hash.new(0)
+  # p counter
+  text.chars.each do |char|
+    # p char
+    counter[char] += 1 unless char == " "
+    # p counter[char]
     # p counter
-    text.chars.each do |char|
-      # p char
-      counter[char] += 1 unless char == " "
-      # p counter[char]
-      # p counter
-    end
-    counter.max_by { |k, v| v }[0]
   end
+  counter.max_by { |k, v| v }[0]
+end
   
   # Intended output:
   # 
