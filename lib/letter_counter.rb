@@ -6,8 +6,10 @@ class LetterCounter
   end
   
   def calculate_most_common()
+    fail "No string given" if @text.empty?
     hash = Hash.new(0)
     @text.downcase.chars.each do |letter| 
+      next unless is_letter?(letter)
       hash[letter] += 1
     end
     hash.max_by{|k,v| v}.reverse!
