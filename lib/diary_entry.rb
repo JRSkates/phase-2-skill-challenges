@@ -1,3 +1,5 @@
+#require 'diary'
+
 class DiaryEntry
   def initialize(title, contents)
     @title = title
@@ -14,6 +16,7 @@ class DiaryEntry
   end
 
   def count_words
+    return 0 if @contents.empty?
     return words.count
   end
 
