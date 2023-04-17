@@ -8,12 +8,10 @@ class Todo
   end
 
   def mark_done!
-  # Marks the todo as done
-  # Returns nothing
+    @task = @task + " DONE"
   end
 
   def done?
-  # Returns true if the todo is marked as done
-  # Otherwise returns false
+    @task.include? "DONE" ? true : false
   end
 end
