@@ -4,19 +4,24 @@ class TodoList
   end
 
   def add(todo)
+    fail "This task is not from the Todo class" unless todo.is_a?(Todo)
     @list << todo
   end
 
   def incomplete
-  # Returns all non-done todos
+    incomplete = []
+    @list.each { |todo| incomplete << todo if todo.done? == false }
+    incomplete
   end
 
   def complete
-  # Returns all complete todos
+    complete = []
+    @list.each { |todo| complete << todo if todo.done? == true }
+    complete
   end
 
   def give_up!
-  # Marks all todos as complete
+    @list.each { |todo| todo.mark_done! }
   end
 
 end
